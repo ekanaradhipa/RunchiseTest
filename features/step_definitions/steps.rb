@@ -10,7 +10,7 @@ driver = Selenium::WebDriver.for:chrome
 Given("I open wetwo") do
 
  driver.navigate.to "https://wetwo.id/"
- sleep(3) #wait for page to load
+ sleep(4) #wait for page to load
  #p "wake up"
  
 end
@@ -20,8 +20,8 @@ end
 
 And("I choose Toko") do
 
-driver.find_element(:xpath, "//*[@class='css-1ozv6b7']").click
-sleep(3) #wait for page to load
+driver.find_element(:xpath, "//*[@class='css-10hhgxr']").click
+sleep(4) #wait for page to load
 end
 
 Then("I see Product") do
@@ -31,3 +31,14 @@ assert_not_nil(el, "error")
 sleep(4) #wait for page to load
 end
 
+And("I click Product") do
+
+driver.find_element(:xpath, "//*[@class='css-1u9uw2c']").click
+sleep(4) #wait for page to load
+end
+
+Then("I see Popup") do
+el = driver.find_element(:xpath, "//*[@class='css-1wlbyqk']")
+assert_not_nil(el, "error")
+sleep(4) #wait for page to load
+end

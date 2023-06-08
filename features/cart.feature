@@ -8,5 +8,7 @@ And I choose Toko
 Then I see Product
 
 @Cart
-Scenario: Add Item to Cart
+Scenario: Popup Product
 Given I see Product
+And I click Product
+Then I see Popup
